@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #Setup dependencies
-sudo pacman -S network-manager-applet picom nitrogen p7zip unzip neofetch freetype2 acpilight lxappearance qt5ct libxft libx11 libxinerama xorg xorg-xinit xorg-fonts-100dpi xorg-fonts-75dpi xorg-fonts-misc xorg-font-util ttf-font gcc dunst xorg-xfd
+sudo pacman -S network-manager-applet picom nitrogen p7zip unzip neofetch freetype2 acpilight lxappearance qt5ct libxft libx11 libxinerama xorg xorg-xinit xorg-fonts-100dpi xorg-fonts-75dpi xorg-fonts-misc xorg-font-util ttf-font gcc dunst xorg-xfd pamixer pulseaudio pulseaudio-bluetooth pulseaudio-alsa
 
 #Copy sources
 cp -rf sources ~/.config/
@@ -20,5 +20,8 @@ cd ~/.gits
 git clone https://aur.archlinux.org/trizen&&
 cd trizen&&
 makepkg -si
+
+trizen -S ncpamixer-git &&
+	trizen -S polkit-dumb-agent-git
 
 cd ~
