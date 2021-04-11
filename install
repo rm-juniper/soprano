@@ -5,7 +5,7 @@ sudo pacman -S network-manager-applet picom nitrogen p7zip unzip neofetch freety
 
 #Copy sources
 cp -rf sources ~/.config/
-cp .xinitrc ~/
+cp xinitrc ~/.xinitrc
 
 #Copy Backgrounds
 mkdir ~/Pictures/
