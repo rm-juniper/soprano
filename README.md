@@ -1,2 +1,2 @@
 # soprano
-Personal dwm fork
+Personal DWM Build

@@ -1,0 +1,24 @@
+#!/bin/bash
+
+#Setup dependencies
+sudo pacman -S network-manager-applet picom nitrogen p7zip unzip neofetch freetype2 acpilight lxappearance qt5ct libxft libx11 libxinerama xorg xorg-xinit xorg-fonts-100dpi xorg-fonts-75dpi xorg-fonts-misc xorg-font-util ttf-font gcc dunst xorg-xfd
+
+#Copy sources
+cp -rf sources ~/.config/
+cp .xinitrc ~/
+
+#Copy Backgrounds
+mkdir ~/Pictures/
+cp -rf soprano_backgrounds ~/Pictures/
+
+#Copy Fonts
+sudo cp -rf tamzen /usr/share/fonts/
+
+#Setup AUR 
+mkdir ~/.gits
+cd ~/.gits
+git clone https://aur.archlinux.org/trizen&&
+cd trizen&&
+makepkg -si
+
+cd ~
